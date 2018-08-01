@@ -1,0 +1,12 @@
+spring:
+  activemq:
+    broker-url: vm://embedded?broker.persistent=false,useShutdownHook=false
+    in-memory: true
+  jms:
+    template:
+      default-destination:
+      delivery-mode: non_persistent
+      priority: 100
+      qos-enabled: true
+      receive-timeout: 1000
+      time-to-live: 36000
